@@ -1,0 +1,20 @@
+body { 
+
+    background: #fce6fcf3
+    font-family: 'segoe U';
+    font-size: 10px;
+    margin: 0;
+    padding: 20px;
+}
+
+h2{
+    background: rgb(108, 34, 178)
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0,0,0,0,1);
+
+
+
+}
