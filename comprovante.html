@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gabriel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprovante do pet</title>
+
+    <link rel="stylesheet" href="css/estilo_petshop.css">
+</head>
+
+
+
+<html>
+<body>
+
+          <div id="resultado"></div>
+
+    <script>
+        let nomePet = localStorage.getItem("nomePet") || "Nao Informado";
+
+        let especiePet = localStorage.getItem ("especiePet") || "Nao Informado";
+
+        let sexoPet = localStorage.getItem ("sexoPet") || "Nao Informado";
+
+        let listaServicos = localStorage.getItem ("listaServicos") || "Nenhum";
+
+        let areaResultado = localStorage.getItem ("resultado");
+
+        areaResultado.innerHTML = `
+
+    <!--- caixa principal do Comprovante --->
+
+        <div class = "Comprovante">
+
+            <!--- Titulo do Comprovante --->
+
+             <h3 class="titulo-comprovante">
+                  DADOS DO PET CADASTRADO
+             </h3>
+
+
+             <hr>
+
+                <!-- Exibiçao dos dados recuperados
+                    <p><strong>Nome:</strong> $(nomePet)</p>
+                    <p><strong>Especie:</strong> $(especiePet)</p>
+                    <p><strong>Sexo:</strong> $(sexoPet)</p>
+                    <p><strong>Serviços:</strong> $(listaServicos)</p>
+                -->
+
+             </hr>   
+
+            <!-- Botao de impressao 
+                window.print() abre a tela de impressao do navegador.
+                
+            -->
+
+            <button onclick = "window.print" class = "botao.imprimir">
+                    Imprimir Comprovante
+            </button>
+
+        </div>
+    `;
+
+    </script>
+
+</body>
+</html>
